@@ -1,0 +1,10 @@
+function ons = GetSSObjectNames
+ons{1} = 'car';
+ons{2} = 'pedestrian';
+ons{3} = 'bicycle';
+ons{4} = 'building';
+ons{5} = 'tree';
+ons{6} = 'road';
+ons{7} = 'sky';
+ons{8} = 'sidewalk';
+ons{9} = 'store';
