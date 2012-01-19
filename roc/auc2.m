@@ -1,4 +1,9 @@
-function a = auc2(px,py,M);
+function a = auc2(px, py, M);
+% function a = auc2(px, py, M)
+%
+% helper function to ROC curve generation.  computes the area under the curve in the unit cube,
+% described by the points on the curve, px, py.  The curve is assumed to be convex, this calcultion
+% will be incorrect if it is not.
 px = px(:);
 py = py(:);
 
