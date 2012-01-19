@@ -1,18 +1,16 @@
 function Model = AdaptiveHistogramTrain(X,options)
 %function Model = AdaptiveHistogram(X,options);
 %
-%the goal is to build a histogram of the datapoints contained in X, but to
-%set the bin boundaries such that, at least marginally along each feature,
-%the bins will each contain the same number of points.  
+% given N, D-dimensional samples X, size(X) == [D,N] : 
+% for each dimension d, select a set of k - 1 thresholds such that the points
+% of X projected into d fall into the k bins in approximately the same number each.
 %
-%input a set of data X q*n where q is the number of features and n is 
-% the number of samples.  
+% These boundaries desribe rasterization of the real space into a set of k^D buckets
+% in such a way that bins are smaller where there are more data.
 %
-%outputs a set of thresholds on the input (X) e input.
+%options: k   defaults to 10
 %
-%options:
-%
-%Ver = 1.0
+
 X = double(X);
 nDims = size(X,1);
 nPts = size(X,2);
@@ -22,21 +20,20 @@ if(nDims > nPts)
     return;
 end
 
-defOpts.nBinsPerFeat = 10;
-defOpts.nBinsMax = inf;
+defOpts.k = 10;
+
 if(nargin < 2)
     options = [];
 end
 options = ResolveMissingOptions(options,defOpts);
 
-binSpacing = nPts / (options.nBinsPerFeat);
+binSpacing = nPts / (options.k);
 binBoundaries = binSpacing:binSpacing:(nPts-1);
 binCentroids = (binSpacing/2):(binSpacing):nPts;
-Model.nFeatures = options.nBinsPerFeat ^ nDims;
+Model.nFeatures = options.k ^ nDims;
 
 for iDim = 1:nDims
     [s,si] = sort(X(iDim,:));
     Model.caBinCenters{iDim} = linInterpSample(s,binCentroids);
     Model.caBinBoundaries{iDim} = linInterpSample(s,binBoundaries);
 end
-    
