@@ -1,7 +1,7 @@
-function sDir = AllFilesUnder(Root,wildcard)
+function sDir = AllFilesUnder(Root, wildcard)
 %function sDir = AllFilesUnder(Root,wildcard)
 %
-%returns a list of files like dir, but includes all sub directories.
+%returns a list of files like dir, but recursively includes all sub directories.
 %
 % BUGFIX, do not include '' as the last path.
 if(nargin < 2)
