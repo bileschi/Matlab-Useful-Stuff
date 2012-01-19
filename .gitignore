@@ -1,0 +1,4 @@
+# osx finder files
+.DS_Store
+# emacs temp files
+*~
