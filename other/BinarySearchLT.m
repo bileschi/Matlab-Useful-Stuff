@@ -6,6 +6,23 @@ function i = BinarySearchLT(l,q);
 %list l sorted >>>>>>> smallest to greatest <<<<<<<<
 %query q  
 %index i is the largest index of l such that l(i) < q
+%
+% %% SCRIPT TESTING THIS FUNCTION
+% % create sorted set of samples of U([0,1]) 
+% l = 10000* rand(10^7,1);
+% l = sort(l);
+% % find the index of the smallest element larger then .5
+% q = .5;
+% tic
+% max(find(l>q))
+% toc
+% tic
+% myi = BinarySearchLT(l,q)
+% toc
+% [l(myi),l(myi+1)]
+
+
+
 i = 0;
 if l(1) > q, return, end
 if l(end) < q, i = length(l), return, end

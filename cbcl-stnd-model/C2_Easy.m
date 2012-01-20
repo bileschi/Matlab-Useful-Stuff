@@ -1,5 +1,5 @@
-function [c2,c1] = C2_Easy(Images,options);
-%function [c2,c1] = C2_Easy(Images,options);
+function [sac2,sac1] = C2_Easy(Images,options);
+%function [sac2,sac1] = C2_Easy(Images,options);
 %
 %images must be either a cell array of images, 
 %or a matrix where each column is an image, wherin the original size parameter of options must be set
@@ -52,6 +52,8 @@ for iImage = 1:nImages, %for every input image
     c1(:,iImage) = vectorizeCellArray(C1_imgI);
   end
 end
+sac2.X = c2;
+sac1.X = c1;
 
 function stim = GetStim(Images,iImg,options)
 if(iscell(Images))

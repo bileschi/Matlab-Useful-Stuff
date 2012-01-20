@@ -1,6 +1,8 @@
 function nlIm = caIm2LayerIm(caIm)
 %function nlIm = caIm2LayerIm(caIm)
 %
+% converts a cell array of images into a single, multi-layer image
+%
 %resizes all images in the caIm to a common size, and stacks them in nlIm
 
 ncells = length(caIm);
