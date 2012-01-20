@@ -1,7 +1,7 @@
 function im2 = imcrop_line(im,lineX,lineY,width)
 %function im2 = imcrop_line(im,lineX,lineY,width)
 %
-%like imcrop, but extracts a box along the line at width w
+%like imcrop, but extracts an arbitrarily oriented box along the input line at width w
 %
 %usually faster than rotating the whole image and cropping.
 
