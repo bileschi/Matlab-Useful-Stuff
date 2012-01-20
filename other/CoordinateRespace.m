@@ -1,6 +1,9 @@
 function coord2_xy = CoordinateRespace(coord1_xy, imsize1, imsize2,mode)
 %function coord2_xy = CoordinateRespace(coord1_xy, imsize1, imsize2,mode)
 %
+% translates positions in frame imsize1 to relatively identical positions in frame imsize2
+%
+%
 %takes input of the form [x,y] where x and y are column vectors of equal length
 %if mode is defined as bbox, then input is of the form [l,t,w,h]
 

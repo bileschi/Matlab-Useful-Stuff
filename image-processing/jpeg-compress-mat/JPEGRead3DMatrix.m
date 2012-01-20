@@ -2,6 +2,8 @@ function A = JPEGRead3DMatrix(WrappingDir, FileName);
 %function JPEGWrite3DMatrix(WrappingDir, FileName);
 %Version 2.0;
 %
+% loads a compressed matrix off of disk.
+%
 %Given the file name of a jpg matrix written with 
 %JPEGWrite3DMatrix, return the full matrix off the disk.
 %Bileschi May 2005

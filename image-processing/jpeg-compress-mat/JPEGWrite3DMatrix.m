@@ -2,6 +2,8 @@ function JPEGWrite3DMatrix(A, WrappingDir, FileName);
 %function JPEGWrite3DMatrix(A, WrappingDir, FileName);
 %Version 1.0;
 %
+%writes a compressed matrix to disk.
+%
 %Given Matrix A, record a JPG compressed copy of the matrix in a folder named WrappingDir.
 %Each layer of the matrix A(:,:,i) will be stored in a separate
 %jpg image.  A top level file will contain the necessary information for reconstruction.
