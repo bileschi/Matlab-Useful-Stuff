@@ -1,5 +1,7 @@
 function [g,d] = GaussianValue(M,Cov,mu);
 % M is n*q
+%
+% samples from n-dim gaussian
 n = size(M,1);
 q = size(M,2);
 if(nargin < 3), mu = zeros([n,1]);, end
