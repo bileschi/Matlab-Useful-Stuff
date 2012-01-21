@@ -1,0 +1,35 @@
+This is a collection of useful tools and procedures I produced over the course of my graduate study in machine learning and computer vision.  I'm more proud of some of the software than others, much of this is experimental code, intended at the time only for my personal use, and I didn't, at the time, have any experience in Software design for reusable, maintainable pieces.   Anyway, I wanted to save it some place before it succumbed to bit-rot.
+
+in order of how useful I think they may be to others:
+
+very-useful-stuff:
+    Contains tools and procedures that I found myself using over and over in many types of projects. This is a general smorgasboard of often simple tools, some of which have been since implemented and become standard in newer versions of MATLAB.  Probably the one I used the most often was 'ResolveMissingOptions.m' which processes two structs, and inserts key value pairs in the second, where the key didn't exist in the first.  This is a much more elegant way of handling default options than checking for empty arrays or fixing the order of the parameter inputs.  Many of these functions could find use in any project.   Most of the other projects will require this directory.
+
+system:
+    Methods for accessing files and other information about the host filesystem.  A little easier to use than the given MATLAB API.
+
+image-processing:
+    This is mostly tools for image filtering and morphological processing.  Also contains tools for dealing with common operations on segmentations.  Subdirectories includ filter-specific stuff, some image features I put together for my paper on Gestatlt Features "Beyond Histograms of Oriented Gradients: The role of Gestalt Features" Bileschi 2007.  The jpeg-compress-mat directory contains tools for saving matricies highly compressed to disk by using jpeg compression.  Of course, these compressions are best when the matrix has image-like statistics of pixel distriution.  I used this to save intermedite values during my "StreetScenes" project.
+
+graphics:
+    Hand in glove with image-processing, this set includes mostly tools for manipulating images and figures.  BluBox is a simple api for drawing transparent colored rectangles on images (no they do not have to be blue).  FourLayerColor is a fantastic tool for illustrating stacks of sparse images, as you may have when you are looking at the detection of multiple objects, or oriented filter reponses. 
+
+classifiers:
+    Contains tools for training / testing classifiers of generic types.  Also for separating data into reusable training / testing splits, or running a cross validation.
+
+roc:
+    Tools for computing and illustrating ROC curves, and other measures of classifier performance.
+
+cbcl-standard-model:
+    My implementation of the image features designed originally by Riesenhuber and Poggio.  These image features predated HoG and SIFT, but are similar in that they collect information about oriented energy at a soft set of locations.  There is some overlap in this directoy to files in image-processing, but I've left them to make cbcl-standard-model somewhat stand alone.
+
+bounding-box:
+    Tools for creating, modifying, and performing geometry on bounding boxes.  Very useful if you are going to be spending a great deal of time detecting objects in images and you need a language to describe these detections.
+
+adaptive-histogram:
+    Learns bin boundaries based on the multidimensional input data.  Input datapoints are accumulated into the appropriate histogram bins, once learned.  This creates a bag-of-words like representation which is often good for classification.
+
+proj-specific:
+    These files are probably not useful to anyone but me, and only when I was actually working on their associated projects.  I should probably remove them from this repository.
+
+All files, unless otherwise noted within the file, are copywright Stanley Bileschi.
