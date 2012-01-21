@@ -3,6 +3,8 @@ function options = ResolveMissingOptions(options,d)
 %finds fields in d that are missing in options, and fills those missing fields in options
 % if for all fields in d, all those fields exist in options, then
 % options is returned unchanged.
+%
+% used to more elegantly handle default parameters in matlab.
 
 names = fieldnames(d);
 for n = 1:length(names)

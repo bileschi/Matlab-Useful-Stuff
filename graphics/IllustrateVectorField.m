@@ -1,5 +1,8 @@
-function im = TwoLayerVectorColor(xim,yim,respaceFlag,confidence)
-%function im = TwoLayerVectorColor(xim,yim,respaceFlag,confidence)
+function im = IllustrateVectorField(xim,yim,respaceFlag,confidence)
+%function im = IllustrateVectorField(xim,yim,respaceFlag,confidence)
+%
+% creates an image illustrating the orientation and magnitude of
+% a vector field
 %
 % hue corresponds to the orientation, 
 % saturation corresponds to the magnitude

@@ -1,4 +1,7 @@
 function imout = rgb2lab_stan(imin)
+%function imout = rgb2lab_stan(imin)
+%
+% modified version of rgb2lab which is less likely to throw errors if input is grayscale
 if(ndims(imin) < 3)
     fprintf('warning: image is grayscale\n');
     imin = repmat(imin,[1,1,3]);

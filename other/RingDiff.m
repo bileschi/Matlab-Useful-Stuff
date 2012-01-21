@@ -3,6 +3,8 @@ function d = RingDiff(x1,x2,rs,re)
 %
 %given a ring from rs to re (ring start ring end), computes the distance between
 %x1 and x2 on that ring
+%
+% useful for finding distances on a circle, when handed two points in radians
 sz = re - rs;
 x1 = x1 - rs;
 x2 = x2 - rs;

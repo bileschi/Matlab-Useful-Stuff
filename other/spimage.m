@@ -4,6 +4,17 @@ function spim = spimage(fi,fj,sz,v);
 %creates an image of minimum size whos elements are zero except for all elements (fi(i),fj(i))
 %whose values are v.  size(fi) must == size(fj)
 % if values v are not supplied, v = ones
+%
+% >> spimage([1,2,5],[1,2,4])
+%
+% ans =
+%
+%      1     0     0     0
+%      0     1     0     0
+%      0     0     0     0
+%      0     0     0     0
+%      0     0     0     1
+
 if(any(size(fi) ~= size(fj)))
    error('size fi must equal size fj');
 end

@@ -5,7 +5,7 @@ function  [X1,f1,X2,f2] = RemoveDuplicateDatapoints(X,Xo);
 % assumes datapoints are columns
 % if nargin ==1, then points within the matrix which are duplicates are removed
 %
-% X1 = X(:,f1)
+% X1 = X(:,f1) where f1 is the first index of each unique column
 %
 %if nargin == 2, then points in the combined matrix [X,Xo] are removed, but resplit into their original sets
 %f1 indicies into X, f2 into xo.

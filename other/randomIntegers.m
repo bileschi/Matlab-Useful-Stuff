@@ -2,7 +2,8 @@ function i = randomIntegers(n,M,bUnique)
 %function i = randomIntegers(n,M,bUnique)
 % returns a vector of n integers from 1 to M
 %
-%
+% set bUnique (default 0) to any pos value to ensure that all integers are unique
+% (uses randperm internally)
 if(nargin < 3)
    bUnique = 0;
 end
