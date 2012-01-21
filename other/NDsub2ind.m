@@ -1,7 +1,8 @@
 function ndx = NDsub2ind(siz,subs)
 %function ndx = NDsub2ind(siz,subs)
 %-------------------------------
-%works more smoothly when the dimensionality of the mtrx is unknown
+%like MATLAB standard sub2ind, but easier
+% to integrate into larger scripts when the dimensionality of the mtrx is unknown
 %siz should be like [10 10 4 5] if subs is like
 % 9 8 3 5
 % 1 1 1 1

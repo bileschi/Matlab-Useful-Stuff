@@ -1,6 +1,8 @@
 function z = NDind2sub(siz,ndx)
 %function z = NDind2sub(siz,ndx)
 %
+% similar to MATLAB standard library ind2sub, but index can be handed as a list
+%
 %does not require multiple inputs.
 %smoother than ind2sub when the dimensionality is unknown.
 %
