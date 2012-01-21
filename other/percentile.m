@@ -1,7 +1,13 @@
 function f = percenctile(v,frac,bApprox);
 %function f = percenctile(v,frac,bApprox);
 %
-%bApprox is default 0
+% given:  matrix of real values v
+%         percentile target frac in range 0 to 1
+%         bApprox flag whether approximate answers are ok
+%
+% returns the value f such that fraction frac of v are less than f
+%
+% bApprox is default 0 (no approximation)
 
 v = v(:);
 if(nargin < 3), bApprox = 0;, end

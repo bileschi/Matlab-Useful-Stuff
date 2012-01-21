@@ -1,5 +1,5 @@
-function PROC_DependantFileScrape(RootFunction,DirToWrite)
-%function PROC_DependantFileScrape(RootFunction,DirToWrite)
+function dependantFileScrape(RootFunction,DirToWrite)
+%function dependantFileScrape(RootFunction,DirToWrite)
 %
 %copies all files that RootFunction depends on to DirToWrite
 %
@@ -16,7 +16,7 @@ if(isunix)
    SYS_DIR = {'/usr/local/matlab','/boot/matlab'};
 end
 if(ismac)
-   SYS_DIR = '/Applications/MATLAB_R2009a.app';
+   SYS_DIR = '/Applications/MATLAB';
 end
 depfuns = depfun(RootFunction);
 nCopy = 0;, nSkip = 0;

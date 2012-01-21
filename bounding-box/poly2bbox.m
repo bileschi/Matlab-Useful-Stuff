@@ -1,5 +1,9 @@
 function [bbox1, bbox2] = poly2bbox(poly);
 %function [bbox1, bbox2] = poly2bbox(poly);
+%
+% finds the minimum axis oriented rectangular boundingbox 
+%  which completely surrounds input poly
+%
 %T = top, L = left, W = width, H = height;
 %R = right, B = bottom
 %

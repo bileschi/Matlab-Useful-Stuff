@@ -1,5 +1,9 @@
 function [X,normXweights,original_order] = outnormalizeDataX(X,normXweights,options);
-%function [X,normXweights,original_order] = outnormalizeDataX(X,normXweights,options);
+% function [X,normXweights,original_order] = outnormalizeDataX(X,normXweights,options);
+%
+% normalize intput matrix X, so that each row will have mean=0 and std=1
+%
+% alternatively, apply normalization mean, and std learned from previously seen training matrix.
 
 if nargin>1
      default_options.useExternalWeights = ~isempty(normXweights);
